@@ -1,0 +1,221 @@
+
+.dark  { --bg-color: #000000; --text-color: #ffffff; }
+.light { --bg-color: #ffffff; --text-color: #000000; }
+
+body
+{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#switch
+{
+    position: fixed; width: 120px; cursor: pointer;
+    image-rendering: pixelated;
+}
+
+.ch
+{
+    position: fixed; width: 70px; image-rendering: pixelated;
+    top: 175px; left: 37px;
+}
+
+@media screen and (max-width: 970px) { .ch { width: 7%; left: 2%; top: 130px; }}
+@media screen and (max-width: 870px) { .ch { top: 120px; }}
+@media screen and (max-width: 770px) { .ch { top: 107px; }}
+@media screen and (max-width: 670px) { .ch { left: 3%; top: 92px; }}
+@media screen and (max-width: 570px) { .ch { top: 80px; }}
+@media screen and (max-width: 400px) { .ch { left: 3.5%; top: 60px; }}
+
+.sh
+{
+    position: fixed; width: 55px; image-rendering: pixelated;
+    top: 165px; left: 41px;
+}
+
+@media screen and (max-width: 970px) { .sh { width: 5%; left: 2.7%; top: 120px; }}
+@media screen and (max-width: 870px) { .sh { top: 110px; }}
+@media screen and (max-width: 770px) { .sh { top: 100px; }}
+@media screen and (max-width: 670px) { .sh { left: 3.2%; top: 85px; }}
+@media screen and (max-width: 570px) { .sh { top: 75px; }}
+@media screen and (max-width: 400px) { .sh { left: 4%; top: 57px; }}
+
+::selection { background-color: #007bff; color: #ffffff; }
+body.dark ::selection { background-color: #fadf59; color: #000000; }
+
+.hide { position: absolute; left: -9999px; }
+
+p
+{
+    font-family: Comic Neue; font-size: 18px; position: absolute;
+    margin-top: 55px; line-height: 1.7; width: 700px;
+
+    left: calc(50%); transform: translate(-50%,0%);
+}
+
+@font-face { font-family: 'apple'; src: url('apple.otf'); }
+
+.eb { display: none; } .et { display: none; }
+
+.itoi
+{ 
+    font-family: 'apple'; font-size: 12px; line-height: 2.2;
+    margin-top: 35px;
+    
+    left: calc(50% + 20px); transform: translate(-50%,0%);
+}
+
+@media screen and (max-width: 1100px) { .itoi { width: 63.5%; }}
+@media screen and (max-width:  900px) { p { width: 78%; }}
+@media screen and (max-width:  970px) { #switch { width: 9%; }}
+@media screen and (max-width:  700px) { .et { display: initial; }}
+@media screen and (max-width:  600px)
+{ 
+    p     { font-size: 16px; width: 71%; line-height: 1.65; }
+    .itoi { left: calc(50% + 30px); }
+    .t    { white-space: nowrap; }
+    .eb   { display: initial; }
+}
+
+.tt
+{
+    font-family: Comic Neue; font-weight: bold; font-size: 25px;
+    display: inline-block; text-align: center; width: 100%;
+    margin-bottom: 15px; white-space: nowrap;
+}
+
+.itt
+{
+    font-family: 'apple'; font-size: 16px; margin-top: 50px;
+    display: inline-block; text-align: center; width: 100%;
+}
+
+.t
+{
+    font-family: Comic Neue; font-weight: bold; font-size: 23px;
+    display: inline-block; text-align: center; width: 100%;
+}
+
+.n  { font-family: Comic Neue; font-weight: bold; color: #00a2e8; }
+.nj { font-family: Comic Neue; font-weight: bold; color: #ea79c8; }
+.nc { font-family: Comic Neue; font-weight: bold; color: #b5e61d; }
+
+.in  { font-family: 'apple'; color: #ef3878; }
+.inc { font-family: 'apple'; color: #527bff; }
+
+.n::before
+{
+    content: url('1.png'); image-rendering: pixelated;
+    display: inline-block; margin-right: 8px;
+    position: relative; top: 3px;
+}
+
+.nj::before
+{
+    content: url('2.png'); image-rendering: pixelated;
+    display: inline-block; margin-right: 8px;
+    position: relative; top: 3px;
+}
+
+.nc::before
+{
+    content: url('3.png'); image-rendering: pixelated;
+    display: inline-block; margin-right: 8px;
+    position: relative; top: 3px;
+}
+
+.in::before
+{
+    content: url('paula.gif'); image-rendering: pixelated;
+    display: inline-block; margin-right: -32px;
+    position: relative; top: 29px; right: 51px;
+}
+
+.inc::before
+{
+    content: url('ness.gif'); image-rendering: pixelated;
+    display: inline-block; margin-right: -32px;
+    position: relative; top: 29px; right: 51px;
+}
+
+@media screen and (max-width: 500px)
+{ 
+    .in::before  { right: 45px; }
+    .inc::before { right: 45px; }
+}
+
+.tt::before
+{
+    content: url('8.gif'); image-rendering: pixelated;
+    display: inline-block; margin-right: 17px;
+    position: relative; top: 9px;
+}
+
+.tt::after
+{
+    content: url('8.gif'); image-rendering: pixelated;
+    display: inline-block; margin-left: 21px;
+    position: relative; top: 11px;
+}
+
+.itt::before
+{
+    content: url('saturn.gif'); image-rendering: pixelated;
+    display: inline-block; margin-right: 18px;
+    position: relative; top: 9px;
+}
+
+.itt::after
+{
+    content: url('saturn.gif'); image-rendering: pixelated;
+    display: inline-block; margin-left: 18px;
+    position: relative; top: 10px;
+}
+
+.t::before
+{
+    content: url('9.png'); image-rendering: pixelated;
+    display: inline-block; margin-right: 18px;
+    position: relative; top: 6px;
+}
+
+.t::after
+{
+    content: url('10.png'); image-rendering: pixelated;
+    display: inline-block; margin-left: 17px;
+    position: relative; top: 13px;
+}
+
+.f   { display: block; margin: 0 auto; width: 100px; }
+.im  { display: inline-block; width: 100%; }
+.imp { display: inline-block; width: 100%; image-rendering: pixelated; }
+
+.sp { margin-left: 27%; white-space: nowrap; }
+.sp img { image-rendering: pixelated; display: inline-block; margin: 0 12px; }
+
+@media screen and (max-width: 900px) { .sp { margin-left:  20%; }}
+@media screen and (max-width: 700px) { .sp { margin-left:  15%; }}
+@media screen and (max-width: 600px) { .sp { margin-left:   5%; }}
+@media screen and (max-width: 500px) { .sp { margin-left:  -2%; }}
+@media screen and (max-width: 550px) { .sp { margin-left: -15%; }}
+@media screen and (max-width: 400px) { .sp { margin-left: -22%; }}
+
+.b
+{ 
+    position: absolute; width: 80px; left: calc(50% + 68px);
+    top: calc(50%); transform: translate(-50%,-50%);
+    image-rendering: pixelated;
+}
+
+.c
+{ 
+    position: absolute; height: 80px; left: calc(50% - 62px);
+    top: calc(50% - 9px); transform: translate(-50%,-50%);
+    image-rendering: pixelated;
+}
+
+@media screen and (max-width: 600px)
+{ 
+    .b { left: calc(50% + 6px); top: calc(50% + 50px); }
+    .c { left: calc(50% + 2px); top: calc(50% - 70px); }
+}
